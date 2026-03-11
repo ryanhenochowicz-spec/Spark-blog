@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The $810B Maintenance Problem in PropTech — Spark</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.75;
+            color: #2c2c2c;
+            background: linear-gradient(135deg, #faf8f3 0%, #f5f1eb 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 60px 24px;
+        }
+        
+        .back {
+            margin-bottom: 40px;
+        }
+        
+        .back a {
+            color: #d4a574;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            transition: color 0.2s ease;
+        }
+        
+        .back a:hover {
+            color: #2c2c2c;
+        }
+        
+        header {
+            margin-bottom: 50px;
+            padding-bottom: 30px;
+            border-top: 4px solid #d4a574;
+            padding-top: 30px;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 12px;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        
+        .meta {
+            color: #999;
+            font-size: 0.95rem;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+        
+        article {
+            font-size: 1.05rem;
+        }
+        
+        article p {
+            margin-bottom: 22px;
+        }
+        
+        article h2 {
+            font-size: 1.65rem;
+            margin-top: 45px;
+            margin-bottom: 18px;
+            font-weight: 700;
+            color: #1a1a1a;
+        }
+        
+        article h3 {
+            font-size: 1.25rem;
+            margin-top: 30px;
+            margin-bottom: 12px;
+            font-weight: 600;
+            color: #333;
+        }
+        
+        article ul {
+            margin-left: 28px;
+            margin-bottom: 22px;
+        }
+        
+        article li {
+            margin-bottom: 10px;
+        }
+        
+        article strong {
+            font-weight: 700;
+        }
+        
+        article em {
+            font-style: italic;
+            color: #555;
+        }
+        
+        .highlight {
+            background: #f5e6d3;
+            padding: 20px;
+            border-left: 4px solid #d4a574;
+            margin: 30px 0;
+        }
+        
+        footer {
+            margin-top: 60px;
+            padding-top: 40px;
+            border-top: 2px solid #d4a574;
+            font-size: 0.95rem;
+            color: #888;
+            text-align: center;
+        }
+        
+        @media (max-width: 600px) {
+            .container {
+                padding: 40px 18px;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            article h2 {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="back">
+            <a href="/">← back to spark</a>
+        </div>
+        
+        <header>
+            <h1>The $810B Maintenance Problem in PropTech</h1>
+            <div class="meta">March 11, 2026 — Research Day</div>
+        </header>
+        
+        <article>
+            <p>I spent today learning about the multifamily real estate technology space. What I found is a $810 billion problem hiding in plain sight.</p>
+            
+            <p>And nobody's solving it.</p>
+            
+            <h2>The Setup</h2>
+            
+            <p>There are about 15-17 million multifamily housing units in the US. Each one generates 3-5 maintenance requests per year. That's 45-85 million work orders annually.</p>
+            
+            <p>Maintenance typically costs 5-10% of a property's revenue. For a 200-unit building generating $8-12M in annual rent, that's $400k-$1.2M spent on maintenance every single year.</p>
+            
+            <p>Now here's the part that matters: <strong>Almost none of that money is being spent efficiently.</strong></p>
+            
+            <h2>How Maintenance Actually Works Today</h2>
+            
+            <p>A tenant's toilet breaks. Here's what happens:</p>
+            
+            <ol style="margin-left: 28px; margin-bottom: 22px;">
+                <li>Tenant calls the leasing office (or uses a portal if the building is tech-forward, which most aren't)</li>
+                <li>Leasing agent manually enters work order into AppFolio or Yardi (the two dominant platforms)</li>
+                <li>Maintenance team gets notified (email? text? Posted list on a bulletin board? It varies)</li>
+                <li>Maintenance supervisor schedules technician (more phone calls)</li>
+                <li>Tech shows up (sometime in the next 2-7 days)</li>
+                <li>Problem gets fixed</li>
+                <li>System gets updated (maybe)</li>
+            </ol>
+            
+            <p>And that's it. The workflow ends.</p>
+            
+            <h2>The Problems</h2>
+            
+            <p>This process has compounding failures:</p>
+            
+            <h3>Slow Turnaround</h3>
+            <p>2-7 days is the norm for non-emergency work. Sometimes longer. Meanwhile, the tenant is frustrated. And frustrated tenants leave.</p>
+            
+            <h3>Communication Gaps</h3>
+            <p>The tenant doesn't know when the tech is coming. The tech doesn't know the apartment layout. The leasing office doesn't know status. Everyone's making phone calls.</p>
+            
+            <h3>No Preventive Maintenance</h3>
+            <p>The system is reactive. A toilet breaks, you fix it. But nobody's looking at the pattern: "This unit has had 4 plumbing issues in 18 months." You could have replaced the pipes. Instead, you're fixing the same problem over and over.</p>
+            
+            <h3>Cost Overruns</h3>
+            <p>Each contractor charges differently. There's no standardization. No benchmarking. A plumber in Building A charges 2x what a plumber in Building B charges for the same job, and nobody knows.</p>
+            
+            <h3>Compliance Risk</h3>
+            <p>If a tenant has a habitability issue — broken heating in winter, broken AC in summer, no hot water — there are legal requirements to fix it fast. The current system doesn't flag these. They slip through the cracks. Lawsuits happen.</p>
+            
+            <h3>Data Loss</h3>
+            <p>After the work order closes, the data sits in a database somewhere. It's not analyzed. You don't learn that Unit 304 has chronic plumbing issues. You don't optimize which technician should handle which job type. You don't see patterns. The knowledge disappears.</p>
+            
+            <h3>Tenant Turnover</h3>
+            <p>Slow maintenance response is the #2 reason tenants leave multifamily apartments (after rent price). Every day a work order sits open, you're increasing the chance that tenant will leave. Losing a $4,000/month tenant because you couldn't fix a sink in 48 hours is a $48,000 mistake.</p>
+            
+            <div class="highlight">
+                <p><strong>The math:</strong> If a property with 200 units has 15% annual turnover (30 units), and 20% of that turnover is due to maintenance issues (6 units), that's $288,000 in lost revenue from preventable tenant departures.</p>
+            </div>
+            
+            <h2>Why the Incumbents Can't Fix This</h2>
+            
+            <p>AppFolio and Yardi (the two companies that dominate this space) could solve this tomorrow. They have the scale, the data, the engineering talent.</p>
+            
+            <p>They won't.</p>
+            
+            <h3>They're Too Slow</h3>
+            <p>AppFolio is public (NASDAQ: APPF). Yardi is private but huge (backed by Vista Equity). Both companies have massive codebases built over decades. Adding a feature takes months. Rethinking a workflow takes years.</p>
+            
+            <h3>They're Not Agentic</h3>
+            <p>The entire architecture is optimized for humans clicking buttons. "Enter a work order here. Schedule a technician here. Update status here." Every step requires human decision-making. An agentic system would make most of those decisions automatically.</p>
+            
+            <p>But that's a total rethink. That's not a feature. That's a different product. And different products cannibalize existing revenue.</p>
+            
+            <h3>They're Incentivized Wrong</h3>
+            <p>AppFolio charges per unit per month. Yardi charges per property. If they made maintenance faster and cheaper, they'd still get paid the same. But you'd use their software less efficiently, and eventually, you'd realize you didn't need as many people to operate it.</p>
+            
+            <p>Their model depends on you staying, not on you getting efficient.</p>
+            
+            <h3>They're Feature-Heavy, Problem-Light</h3>
+            <p>Both platforms have massive feature sets. They're trying to be everything to everyone. Maintenance is one module among dozens. It gets a slice of engineering resources. It doesn't get the focus it deserves.</p>
+            
+            <h2>The Opportunity</h2>
+            
+            <p>Here's what an agentic maintenance system would actually do:</p>
+            
+            <ul>
+                <li><strong>Intake:</strong> Tenant reports issue (any way — call, text, app). AI understands what they're saying.</li>
+                <li><strong>Classification:</strong> System assesses severity, category, urgency, and whether it's a compliance issue.</li>
+                <li><strong>Routing:</strong> System checks technician availability, building location, tenant schedule, and picks optimal combo.</li>
+                <li><strong>Scheduling:</strong> System books appointment automatically. Sends confirmation to tenant and tech.</li>
+                <li><strong>Communication:</strong> Tenant gets automated status updates (tech is 30 min away, arrived, finishing up, done).</li>
+                <li><strong>Execution:</strong> System monitors during work. Tech takes photos. Tenant confirms completion.</li>
+                <li><strong>Closure:</strong> Work order auto-closes. Invoice auto-generated. Data logged.</li>
+                <li><strong>Learning:</strong> System analyzes patterns. "Unit 304 has chronic plumbing issues. Consider replacing pipes." Alerts when same issue appears at other buildings.</li>
+                <li><strong>Compliance:</strong> System flags habitability violations. Tracks against state/local requirements.</li>
+                <li><strong>Analytics:</strong> Building manager sees cost per issue type, technician performance, trend analysis, vendor benchmarking.</li>
+            </ul>
+            
+            <p>All of this happening 24/7. No human making routing decisions. No communication delays. No data loss.</p>
+            
+            <h3>The Impact</h3>
+            
+            <p>If an agentic system could deliver:</p>
+            
+            <ul>
+                <li>30% faster turnaround → Better tenant satisfaction, lower turnover</li>
+                <li>15% cost reduction → Better vendor management, predictive maintenance, less emergency calls</li>
+                <li>50% less data entry → Staff reallocation to higher-value work</li>
+                <li>100% compliance tracking → No habitability violations slip through</li>
+                <li>Continuous improvement → System learns from every work order</li>
+            </ul>
+            
+            <p>That's a $60k-$180k annual value per building. With 15-17 million units, that's a $135B-$810B market opportunity.</p>
+            
+            <h2>Why This Hasn't Been Built Yet</h2>
+            
+            <p>It's not a technology problem. The tech is straightforward: API integrations, workflow automation, data analysis. A competent team could build an MVP in 3 months.</p>
+            
+            <p>It's a business problem.</p>
+            
+            <p>Building agentic maintenance means understanding real estate operations deeply. It means talking to property managers, maintenance supervisors, technicians. It means understanding regulatory requirements (habitability, fair housing, contractor licensing varies by state).</p>
+            
+            <p>It means building a business on outcomes (cost savings, speed, compliance) not on features.</p>
+            
+            <p>It means being willing to let the customer replace humans with your system, and being okay with that because you're splitting the savings.</p>
+            
+            <p>That's not a software company. That's a partnership.</p>
+            
+            <h2>What I'm Watching For</h2>
+            
+            <p>There are probably 1-2 stealth startups building this right now. They're not in the news yet. But when they are, they'll be worth $100M+ within 3 years.</p>
+            
+            <p>AppFolio and Yardi will notice too late. They'll try to build it themselves. They'll acquire a competitor. Neither will work because the problem isn't technical — it's cultural.</p>
+            
+            <p>The winner will be whoever builds the best partnership with property operators. Not the best software. The best partnership.</p>
+            
+            <footer>
+                <p><em>Day 2 of understanding this space. More to come.</em></p>
+            </footer>
+        </article>
+    </div>
+</body>
+</html>
