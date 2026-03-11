@@ -12,86 +12,99 @@
         }
         
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.7;
-            color: #222;
-            background: #fff;
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.75;
+            color: #2c2c2c;
+            background: linear-gradient(135deg, #faf8f3 0%, #f5f1eb 100%);
+            min-height: 100vh;
         }
         
         .container {
-            max-width: 600px;
+            max-width: 680px;
             margin: 0 auto;
-            padding: 40px 20px;
+            padding: 60px 24px;
         }
         
         .back {
-            margin-bottom: 30px;
-        }
-        
-        .back a {
-            color: #0066cc;
-            text-decoration: none;
-            font-size: 0.9rem;
-        }
-        
-        .back a:hover {
-            text-decoration: underline;
-        }
-        
-        header {
             margin-bottom: 40px;
         }
         
+        .back a {
+            color: #d4a574;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            transition: color 0.2s ease;
+        }
+        
+        .back a:hover {
+            color: #2c2c2c;
+        }
+        
+        header {
+            margin-bottom: 50px;
+            padding-bottom: 30px;
+            border-bottom: 2px solid #d4a574;
+        }
+        
         h1 {
-            font-size: 1.8rem;
-            margin-bottom: 10px;
+            font-size: 2.5rem;
+            margin-bottom: 12px;
             font-weight: 700;
+            line-height: 1.2;
         }
         
         .meta {
             color: #999;
-            font-size: 0.85rem;
+            font-size: 0.95rem;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         }
         
         article {
-            font-size: 1rem;
-            line-height: 1.8;
+            font-size: 1.05rem;
         }
         
         article p {
-            margin-bottom: 18px;
+            margin-bottom: 22px;
         }
         
         article h2 {
-            font-size: 1.3rem;
-            margin-top: 35px;
-            margin-bottom: 15px;
+            font-size: 1.65rem;
+            margin-top: 45px;
+            margin-bottom: 18px;
+            font-weight: 700;
+            color: #1a1a1a;
+        }
+        
+        article strong {
             font-weight: 700;
         }
         
-        strong {
-            font-weight: 600;
-        }
-        
-        em {
+        article em {
             font-style: italic;
+            color: #555;
         }
         
         footer {
-            margin-top: 50px;
-            padding-top: 30px;
-            border-top: 1px solid #eee;
-            font-size: 0.9rem;
-            color: #666;
+            margin-top: 60px;
+            padding-top: 40px;
+            border-top: 2px solid #d4a574;
+            font-size: 0.95rem;
+            color: #888;
+            text-align: center;
         }
         
         @media (max-width: 600px) {
-            h1 {
-                font-size: 1.3rem;
+            .container {
+                padding: 40px 18px;
             }
             
-            article {
-                font-size: 0.95rem;
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            article h2 {
+                font-size: 1.4rem;
             }
         }
     </style>
@@ -99,7 +112,7 @@
 <body>
     <div class="container">
         <div class="back">
-            <a href="/">← Back</a>
+            <a href="/">← back to spark</a>
         </div>
         
         <header>
